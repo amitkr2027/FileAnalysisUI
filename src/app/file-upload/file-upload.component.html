@@ -1,0 +1,51 @@
+<div class="page-header">
+    <h1 style="align-self: center;">File Analysis App</h1>
+</div>
+
+<div class="page-body">
+    <div class='form-container'>
+        <div class="text-center">
+            <h2 class="body-title">Select the File & Get Analysis Report !!</h2>
+            <div class="form-input">
+                <input class="form-control" type="file" (change)="onChange($event)">
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="form-option">
+            <div class="report-option" *ngIf="isFileAvailable  && !success">
+                <h4 style="color:green">File successfully Uploaded & Click below to generate Report ! </h4>
+                <br>
+                <button (click)="onUpload()" class="btn btn-success">
+                    Get Analysis Report
+                </button>
+            </div>
+            <div class="new-reqeust-option " *ngIf="success">
+                <h3 style="color:red"> Click below to clear result !</h3>
+                <button (click)="onNewRequest()" class="btn btn-success">
+                    clear
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="load-container" *ngIf="loading">
+        <h3>Loading ...</h3>
+    </div>
+
+    <div class="result-container" *ngIf="success">
+        <h3 style="color:brown">Analysis Report : {{this.file.name}}</h3>
+        <table>
+            <tr *ngFor="let item of result">
+                <td *ngFor="let key of item">
+                    {{key}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div class="page-footer">
+    Designed & Developed By : Amit Kumar
+</div>

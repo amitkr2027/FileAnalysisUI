@@ -1,0 +1,35 @@
+.page-header {
+    padding-left:30px;
+    align-self: center;
+    color:cyan;
+    height: 75px;
+    border: 1px solid green;
+  }
+
+  .page-body {
+    margin-top: 50px;
+    text-align: center; 
+    color: black;
+  }
+  .result-container {
+    text-align: left;
+    margin-left: 30px;
+  }
+  .form-input{
+      margin-top:80px;
+  }
+  .form-option{
+      margin-top:30px;
+      display: inline-flex;
+      
+  }
+
+  .page-footer {
+    position: fixed;
+    margin-left: 1700px;
+    bottom: 50px;
+    color:green;
+    margin-right: 10px;
+    align-self: right;
+    text-align: center;
+  }

@@ -1,6 +1,7 @@
 {
   "name": "file-analysis-ui",
   "version": "0.0.0",
+  "start": "ng serve --proxy-config proxy.conf.json",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
